@@ -24,7 +24,7 @@ export async function load() {
 			});
 			return {
 				...sorprexa,
-				timestamp: `${dateString} a las ${timeString}`,
+				timestamp: `${dateString}, ${timeString}`,
 				date: date
 			};
 		});

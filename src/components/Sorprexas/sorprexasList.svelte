@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import PrimaryButton from '../PrimaryButton.svelte';
 	import SorprexaDetail from './sorprexaDetail.svelte';
 
 	export let sorprexas = [];
@@ -12,22 +13,21 @@
 {:else}
 	{#each sorprexas as sorprexa, index}
 		{#if sorprexa?.date < new Date()}
-			<button
-				class="mx-auto block text-center text-[18px] border border-red max-w-10/12 bg-red-400 text-white p-4"
-				on:click={() => (chosenSorprexa = sorprexa)}
-			>
-				Sorprexa {index + 1}
-			</button>
+			<PrimaryButton
+				text={`Sorprexa ${index + 1}`}
+				onClick={() => (chosenSorprexa = sorprexa)}
+				color="red"
+			/>
 		{:else}
-			<button
-				class="mx-auto block text-center text-[18px] border border-red w-10/12 bg-gray-400 text-white p-4"
+			<PrimaryButton
+				text={`Sorprexa ${index + 1}`}
+				onClick={() => (chosenSorprexa = sorprexa)}
 				disabled
-				on:click={() => (chosenSorprexa = sorprexa)}
-			>
-				Sorprexa {index + 1}
-			</button>
-			<div class="text-center w-10/12 mx-auto my-4">
-				Se desbloquea el {sorprexa?.timestamp}
+				color="gray"
+				extraClass="bg-gray-500"
+			/>
+			<div class="text-center w-10/12 mx-auto mb-8">
+				Esta sorprexa se desbloquea el {sorprexa?.timestamp}
 			</div>
 		{/if}
 	{/each}
