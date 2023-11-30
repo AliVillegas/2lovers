@@ -1,11 +1,11 @@
 <script>
-	import CrayonLoader from '../components/crayonLoader.svelte';
+	import CrayonLoader from '$lib/components/crayonLoader.svelte';
 	import { goto } from '$app/navigation';
-	import PrimaryButton from '../components/PrimaryButton.svelte';
-	import HomeChristmasAnimation from '../components/homeChristmasAnimation.svelte';
+	import PrimaryButton from '$lib/components/PrimaryButton.svelte';
+	import HomeChristmasAnimation from '$lib/components/homeChristmasAnimation.svelte';
 
 	let loading = true;
-	let loadingTime = 350;
+	let loadingTime = 3500;
 
 	setTimeout(() => {
 		loading = false;
@@ -17,5 +17,10 @@
 {:else}
 	<h1 class="mx-auto text-center text-[42px] mt-12">Un diciembre lleno de sorprexas</h1>
 	<HomeChristmasAnimation />
-	<PrimaryButton text="Ver sorprexas" onClick={() => goto('/sorprexas')} />
+	<PrimaryButton
+		text="Ver sorprexas"
+		onClick={() => goto('/sorprexas')}
+		color="green"
+		extraClass="bg-green-500"
+	/>
 {/if}

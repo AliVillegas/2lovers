@@ -2,19 +2,23 @@
 	export let text;
 	export let onClick;
 	export let color = 'green';
-	export let animationDuration = 600;
+	export let withAnimation = true;
+	export let animationDuration = 400;
 	export let disabled = false;
 	export let extraClass = '';
 	let clicked = false;
 
 	async function handleButtonClick() {
-		console.log('clicking button');
-		clicked = true;
-		await new Promise((r) => setTimeout(r, 300));
-		clicked = false;
-		setTimeout(() => {
+		if (withAnimation) {
+			clicked = true;
+			await new Promise((r) => setTimeout(r, 300));
+			clicked = false;
+			setTimeout(() => {
+				onClick();
+			}, animationDuration);
+		} else {
 			onClick();
-		}, animationDuration);
+		}
 	}
 </script>
 

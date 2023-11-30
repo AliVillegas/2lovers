@@ -1,5 +1,5 @@
 <script>
-	import CrayonDiv from '$lib/components/CrayonDiv.svelte';
+	import CrayonDiv from '$lib/components/crayonDiv.svelte';
 
 	export let data;
 	export let messages = data?.messages || [];
