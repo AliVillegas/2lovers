@@ -23,8 +23,8 @@
 	};
 
 	const calculateInterval = (messageLength) => {
-		const baseInterval = 80; // Base interval of 1 second
-		const additionalTimePerCharacter = 10; // Additional 50 milliseconds per character
+		const baseInterval = 120; // Base interval of 1 second
+		const additionalTimePerCharacter = 30; // Additional 50 milliseconds per character
 		return baseInterval + messageLength * additionalTimePerCharacter;
 	};
 
