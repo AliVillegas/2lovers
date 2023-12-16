@@ -68,7 +68,7 @@
 				<PrimaryButton
 					text="Activar sorprexa"
 					color="yellow"
-					onClick={() => window.open(sorprexa?.url)}
+					onClick={() => window.open(sorprexa?.url, '_self')}
 					extraClass="bg-amber-400"
 				/>
 			</div>
