@@ -27,6 +27,7 @@
 	"type": "module",
 	"dependencies": {
 		"firebase": "^10.7.0",
-		"firebase-admin": "^11.11.1"
+		"firebase-admin": "^11.11.1",
+		"uuidv4": "^6.2.13"
 	}
 }
