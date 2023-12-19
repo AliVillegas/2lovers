@@ -13,7 +13,7 @@
 	};
 </script>
 
-<div class="flex flex-col gap-0 mb-4 w-6/12 items-center justify-center mx-auto">
+<div class="flex flex-col gap-0 mb-4 w-6/12 max-w-[250px] items-center justify-center mx-auto">
 	<h2 class="font-bold text-lg mt-2">{movie?.title}</h2>
 	<img src={movie?.url} alt={movie?.title} class="w-30 h-auto object-cover rounded-lg" />
 	{#if checkbox}
